@@ -1,1 +1,4 @@
 01-escrow.md
+02-robot-nft-part-1.md
+03-robot-nft-part-2.md
+04-oracle.md
