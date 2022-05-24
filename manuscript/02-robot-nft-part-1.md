@@ -366,14 +366,14 @@ Once this contract has been deployed, it will show up as an expandable box below
 
 
 {width: 80%, align: middle}
-![Expand contract](/resources/2-expand.png)
+![Expand contract](resources/2-expand.png)
 
 [Click to open video](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/expand.mp4)
 
 Mint your first NFT by navigating to the `mint` function. Click on your wallet address in the top right corner of the page to copy it, and then paste it into the `recipient` field. Then run the function and approve the MetaMask pop-up that appears.
 
 {width: 80%, align: middle}
-![Mint](/resources/2-mint.png)
+![Mint](resources/2-mint.png)
 
 [Click to open video](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/mint.mp4)
 

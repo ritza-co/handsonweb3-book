@@ -13,7 +13,7 @@ If you haven't already, [install Metamask](https://metamask.io/download/) in you
 Once your repl is loaded, create a new directory named `frontend`. This directory will contain the HTML, JavaScript, and image files used for our frontend. Inside this directory, create a second directory named `svg`. Download [this ZIP folder containing our NFT art assets](/tutorial-files/robot-nft-p2/replbot-art.zip), unzip it, and upload its contents to the `svg` directory you just created.
 
 {width: 80%, align: middle}
-![Upload SVG](/resources/3-frontend-svg.png)
+![Upload SVG](resources/3-frontend-svg.png)
 
 [Click to open video](https://docs.replit.com/images/tutorials/43-robot-nft-p2/frontend-svg-dir.mp4)
 
@@ -575,7 +575,7 @@ app.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
 This script will serve the files we created in `frontend`. To make it execute when we run our repl, make sure that config files are showing and open `.replit`.
 
 {width: 80%, align: middle}
-![Show config](/resources/3-show-config.png)
+![Show config](resources/3-show-config.png)
 
 [Click to open video](https://docs.replit.com/images/tutorials/43-robot-nft-p2/show-config.mp4)
 
