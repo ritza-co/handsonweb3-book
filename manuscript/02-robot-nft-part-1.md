@@ -18,7 +18,7 @@ We need two things to get started with this project: a Solidity repl and a brows
 
 Sign in to [Replit](https://replit.com) or [create an account](https://replit.com/signup) if you haven't already. Once logged in, create a Solidity starter repl.
 
-![Creating a new Repl](/images/tutorials/42-robot-nft-ethereum/solidity-repl.png)
+![Creating a new Repl](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/solidity-repl.png)
 
 The Solidity starter repl works a little differently from other repls you may have used in the past. Rather than running our repl every time we want to test out a new piece of code, we can run our repl once, to start it up, and it will automatically reload when changes are made to our Solidity code in `contract.sol`.
 
@@ -32,9 +32,8 @@ Once you've installed MetaMask, follow the prompts to create a wallet and sign i
 
 If you're already using MetaMask, we recommend creating a new account for testing with Replit. You can do this from the account menu, which appears when you click on the account avatar in the top right corner of the MetaMask interface.
 
-<img src="/images/tutorials/42-robot-nft-ethereum/createaccount.png"
-alt="Create new metamask account"
-style="Width: 50% !important;"/>
+{width: 50%, align: middle}
+![Create new metamask account](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/createaccount.png)
 
 
 ## Introduction to smart contract development
@@ -55,21 +54,16 @@ Solidity, which we will be using below, is the most popular language for develop
 
 Our ReplBot NFT will consist of a base robot and three accessories. The base robot looks like this:
 
-
-<img src="/images/tutorials/42-robot-nft-ethereum/bothead-01.svg"
-alt="Base robot"
-style="Width: 60% !important;"/>
+{width: 60%, align: middle}
+![Base robot](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/bothead-01.svg)
 
 Each NFT will have three different colors for its frame, visor, and background. Each NFT will also have three different accessories: headgear (a hat or wig), eargear (animal ears or headphones), and facegear (glasses or masks). Some examples:
 
-<img src="/images/tutorials/42-robot-nft-ethereum/replbot-nft-1.svg"
-alt="NFT 1"
-style="Width: 60% !important;"/>
+{width: 60%, align: middle}
+![NFT 1](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/replbot-nft-1.svg)
 
-
-<img src="/images/tutorials/42-robot-nft-ethereum/replbot-nft-2.svg"
-alt="NFT 2"
-style="Width: 60% !important;"/>
+{width: 60%, align: middle}
+![NFT 2](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/replbot-nft-2.svg)
 
 
 Which colors and accessories each NFT has will be randomly determined at creation time.
@@ -353,39 +347,41 @@ Now that we've implemented our NFT's core functionality, it's time to deploy to 
 
 First, run your repl. Once all of the dependencies are installed, you should see the Replit Ethereum web interface in your repl's browser. It looks like this:
 
-![REPL Ethereum web interface](/images/tutorials/42-robot-nft-ethereum/repl-eth-web.png)
+![REPL Ethereum web interface](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/repl-eth-web.png)
 
 Connect your MetaMask wallet to the web interface and switch to the Replit Testnet. Then click the link to get 1 ETH for testing. Wait until 1 ETH shows up in your wallet balance on the top right of the page.
 
-![Switching to test](/images/tutorials/42-robot-nft-ethereum/switch-to-test.png)
-![Getting one Ether](/images/tutorials/42-robot-nft-ethereum/get-one.png)
+![Switching to test network](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/switch-to-test.png)
+![Getting one Ether](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/get-one.png)
 
 Now you can deploy your contracts. Select "ReplBots" from the drop-down box and click "Deploy". Approve the MetaMask pop-up that appears.
 
-![Deploy the contract](/images/tutorials/42-robot-nft-ethereum/deploy.png)
+![Deploying the contract](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/deploy.png)
 
-<img src="/images/tutorials/42-robot-nft-ethereum/confirmdeploy.png"
-alt="Confirm deploy"
-style="Width: 50% !important;"/>
+{width: 50%, align: middle}
+![Confirm deploy](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/confirmdeploy.png)
 
 
 Once this contract has been deployed, it will show up as an expandable box below the drop-down box. Expand it and take a look at all the different functions available.
 
-<video width="80%" autoplay loop>
-    <source src="/images/tutorials/42-robot-nft-ethereum/expand.mp4" type="video/mp4">
-</video>
+
+{width: 80%, align: middle}
+![Expand contract](/resources/2-expand.png)
+
+[Click to open video](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/expand.mp4)
 
 Mint your first NFT by navigating to the `mint` function. Click on your wallet address in the top right corner of the page to copy it, and then paste it into the `recipient` field. Then run the function and approve the MetaMask pop-up that appears.
 
-<video width="80%" autoplay loop>
-    <source src="/images/tutorials/42-robot-nft-ethereum/mint.mp4" type="video/mp4">
-</video>
+{width: 80%, align: middle}
+![Mint](/resources/2-mint.png)
+
+[Click to open video](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/mint.mp4)
 
 After a few seconds, you should see a pop-up indicating that your transaction has gone through. Congratulations, you're the proud owner of a ReplBot NFT! Check out its colors and accessories by entering ID 0 into `botColors` and `botAccessories`.
 
 If you mint again, you should receive a ReplBot with ID 1 and a different set of colors and accessories.
 
-![Bot colors](/images/tutorials/42-robot-nft-ethereum/botcolors.png)
+![Bot colors](https://docs.replit.com/images/tutorials/42-robot-nft-ethereum/botcolors.png)
 
 ## Breeding bots
 
@@ -548,4 +544,7 @@ We're done with our contract code. In the second part of this tutorial, we'll bu
 * Tweak the breeding algorithm.
 * Introduce a [siring mechanism](https://medium.com/cryptokitties/siring-your-kitties-for-fun-and-profit-b6c8f0fc3860) that allows users to breed ReplBots they don't own.
 
-<iframe height="400px" width="100%" src="https://replit.com/@ritza/ReplBots?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+## Code
+
+You can find the code for this tutorial on [Replit](https://replit.com/@ritza/ReplBots).
+

@@ -6,18 +6,16 @@ By the end of this tutorial, you will know the basics of interacting with wallet
 
 ## Getting started
 
-Open the repl you created in part one of this tutorial, or clone ours:
-
-<iframe height="400px" width="100%" src="https://replit.com/@ritza/ReplBots?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+Open the repl you created in part one of this tutorial, or clone ours on [Replit](https://replit.com/@ritza/ReplBots).
 
 If you haven't already, [install Metamask](https://metamask.io/download/) in your browser.
 
 Once your repl is loaded, create a new directory named `frontend`. This directory will contain the HTML, JavaScript, and image files used for our frontend. Inside this directory, create a second directory named `svg`. Download [this ZIP folder containing our NFT art assets](/tutorial-files/robot-nft-p2/replbot-art.zip), unzip it, and upload its contents to the `svg` directory you just created.
 
+{width: 80%, align: middle}
+![Upload SVG](/resources/3-frontend-svg.png)
 
-<video width="80%" autoplay loop>
-<source src="/images/tutorials/43-robot-nft-p2/frontend-svg-dir.mp4" type="video/mp4">
-</video>
+[Click to open video](https://docs.replit.com/images/tutorials/43-robot-nft-p2/frontend-svg-dir.mp4)
 
 Inside the main `frontend` directory, create the following files:
 
@@ -29,18 +27,18 @@ Before we start populating these files, we need to have a ReplBots contract inst
 
 First, run your repl. Once all of the dependencies are installed, you should see the Replit Ethereum web interface in your repl's browser. It looks like this:
 
-![Replit Ethereum interface](/images/tutorials/43-robot-nft-p2/repl-eth-web.png)
+![Replit Ethereum interface](https://docs.replit.com/images/tutorials/43-robot-nft-p2/repl-eth-web.png)
 
 Connect your MetaMask wallet to the web interface and switch to the Replit Testnet. If your balance is 0 ETH, click the link marked "Get 1 ETH for testing". Wait until 1 ETH shows up in your wallet balance on the top right of the page.
 
-![Switching to testnet](/images/tutorials/43-robot-nft-p2/switch-to-test.png)
-![Get one ethereum](/images/tutorials/43-robot-nft-p2/get-one.png)
+![Switching to testnet](https://docs.replit.com/images/tutorials/43-robot-nft-p2/switch-to-test.png)
+![Get one ethereum](https://docs.replit.com/images/tutorials/43-robot-nft-p2/get-one.png)
 
 Now you can deploy your contracts. Select "ReplBots" from the drop-down box and click **Deploy**. Approve the MetaMask pop-up that appears.
 
 Once this contract has been deployed, it will show up as an expandable box. If you expand the deployed contract, at the bottom, you'll see a value starting with `0x`: the contract's address. Click on this address to copy it to your clipboard. Then paste it in a safe place, such as the bottom of your repl's `README.md`. 
 
-![Copy contract address](/images/tutorials/43-robot-nft-p2/copy-addr.png)
+![Copy contract address](https://docs.replit.com/images/tutorials/43-robot-nft-p2/copy-addr.png)
 
 Next to the contract's address, you should see a button labeled "Copy ABI". Click on this button to copy the contract's ABI ([Application Binary Interface](https://docs.soliditylang.org/en/v0.8.13/abi-spec.html)) to your clipboard, and paste it into the same place you put the contract address. You should see a large JSON object.
 
@@ -306,7 +304,7 @@ Most common image files, such as JPEGs and PNGs, are [raster graphics](https://e
 
 Both image formats have their advantages and disadvantages – a relevant advantage to SVGs is that they're formatted a lot like HTML files, so it's pretty simple to manipulate them programmatically in JavaScript. To see what an SVG looks like under the hood, rename one of the files in `frontend/svg` from `.svg` to `.html`.
 
-![SVG inside](/images/tutorials/43-robot-nft-p2/svg-inside.png)
+![SVG inside](https://docs.replit.com/images/tutorials/43-robot-nft-p2/svg-inside.png)
 
 As you can see, an SVG is made up of a whole lot of XML tags. It even includes CSS for styling, inside the `<defs>` tag – we'll use this to change colors. When you're done looking at the file, change its file extension back to `.svg`.
 
@@ -576,9 +574,10 @@ app.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
 
 This script will serve the files we created in `frontend`. To make it execute when we run our repl, make sure that config files are showing and open `.replit`.
 
-<video width="80%" autoplay loop>
-<source src="/images/tutorials/43-robot-nft-p2/show-config.mp4" type="video/mp4">
-</video>
+{width: 80%, align: middle}
+![Show config](/resources/3-show-config.png)
+
+[Click to open video](https://docs.replit.com/images/tutorials/43-robot-nft-p2/show-config.mp4)
 
 In `.replit`, replace the line `run = "node tools"` with the following:
 
@@ -588,7 +587,7 @@ run = "node frontend.js"
 
 Run your repl. You should now see your frontend. If you've minted any ReplBot NFTs already, those will also show up.
 
-![Completed app](/images/tutorials/43-robot-nft-p2/final-dapp.png)
+![Completed app](https://docs.replit.com/images/tutorials/43-robot-nft-p2/final-dapp.png)
 
 ## Where next?
 
@@ -601,7 +600,9 @@ In this two-part tutorial, we've built a fully functional decentralised applicat
 * Change the dapp's stylesheet.
 * Implement frontend components for any of the new functions you added to the contract after completing part one!
 
-Your can find our repl below:
 
-<iframe height="400px" width="100%" src="https://replit.com/@ritza/ReplBotsPart2?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+## Code
+
+You can find the code for this tutorial on [Replit](https://replit.com/@ritza/ReplBotsPart2).
+
 

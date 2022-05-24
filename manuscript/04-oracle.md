@@ -16,7 +16,7 @@ We need two things to get started with this project: a Solidity repl and a brows
 
 Sign in to [Replit](https://replit.com) or [create an account](https://replit.com/signup) if you haven't already. Once logged in, create a Solidity starter repl.
 
-![Create Solidity starter REPL](/images/tutorials/44-smart-contract-oracle/solidity-repl.png)
+![Creating a Solidity starter REPL](https://docs.replit.com/images/tutorials/44-smart-contract-oracle/solidity-repl.png)
 
 The Solidity starter repl works a little differently from other repls you may have used in the past. Rather than running our repl every time we want to test out a new piece of code, we can run our repl once, to start it up, and it will automatically reload when changes are made to our Solidity code in `contract.sol`.
 
@@ -30,15 +30,15 @@ Once you've installed MetaMask, follow the prompts to create a wallet and sign i
 
 If you're already using MetaMask, we recommend creating a new account for testing with Replit. You can do this from the account menu, which appears when you click on the account avatar in the top right corner of the MetaMask interface.
 
-<img src="/images/tutorials/44-smart-contract-oracle/createaccount.png"
-    alt="New testing account in metamask"
-    style="width: 50% !important;"/>
+{width: 50%, align: middle}
+![New testing account in metamask](https://docs.replit.com/images/tutorials/44-smart-contract-oracle/createaccount.png)
+
 
 ## Oracle design
 
 An oracle is a hybrid system, made up of both contracts and traditional web server code. The contracts provide an interface for other contracts to request and receive data, and the web server code uses events and contract functions to respond to these requests and supply the required data. At a high level, the architecture looks like this:
 
-![Oracle diagram](/images/tutorials/44-smart-contract-oracle/oracle-diagram.svg)
+![Oracle diagram](https://docs.replit.com/images/tutorials/44-smart-contract-oracle/oracle-diagram.svg)
 
 Users interact with different smart contract protocols, such as decentralized exchanges or NFT markets. These protocols can source data from an oracle smart contract, which receives its data from off-chain data providers (these are usually some form of API).
 
@@ -723,16 +723,16 @@ Enter your repl's name as indicated. Then run your repl and wait for the Solidit
 
 Once we've compiled, we can deploy, but for that we'll need some funds. Connect your MetaMask wallet to the web interface and switch to the Replit Testnet. Then click the link to get 1 ETH for testing. Wait until 1 ETH shows up in your wallet balance on the top right of the page.
 
-![Switch to test](/images/tutorials/44-smart-contract-oracle/switch-to-test.png)
-![Get one Ether](/images/tutorials/44-smart-contract-oracle/get-one.png)
+![Switching to test network](https://docs.replit.com/images/tutorials/44-smart-contract-oracle/switch-to-test.png)
+![Getting one Ether](https://docs.replit.com/images/tutorials/44-smart-contract-oracle/get-one.png)
 
 Now you can deploy your contracts. Select "Caller" from the drop-down box and click **Deploy**. Approve the MetaMask pop-up that appears. Then do the same with "RandOracle".
 
-![Contract deployment](/images/tutorials/44-smart-contract-oracle/contractdeploy.png)
+![Contract deployment](https://docs.replit.com/images/tutorials/44-smart-contract-oracle/contractdeploy.png)
 
 Once both contracts have been deployed, they will show up as expandable boxes below the drop-down box. Expand them and take a look at the functions available in each.
 
-![Deployed contracts](/images/tutorials/44-smart-contract-oracle/deployedcontracts.png)
+![Deployed contracts](https://docs.replit.com/images/tutorials/44-smart-contract-oracle/deployedcontracts.png)
 
 In practice, the `Caller` and `RandOracle` contracts would usually be deployed by different addresses, potentially belonging to entirely different teams, but we're using a single one to avoid having to log in and out of MetaMask over and over.
 
@@ -740,7 +740,7 @@ In practice, the `Caller` and `RandOracle` contracts would usually be deployed b
 
 Next, we need to connect `Caller` to `RandOracle`. Find the `setRandOracleAddress` function in `Caller`. Then click on the address at the bottom of `RandOracle`'s dropdown box to copy it and paste it in as the value for `newAddress`. Then click **Run**.
 
-![RandOrcale address](/images/tutorials/44-smart-contract-oracle/roracleaddress.png)
+![RandOrcale address](https://docs.replit.com/images/tutorials/44-smart-contract-oracle/roracleaddress.png)
 
 We're done setting up our contracts, but leave your repl running with the Solidity starter web interface open, as we'll need it to set up our data provider application and client frontend.
 
@@ -754,7 +754,7 @@ Before we do anything to integrate our data provider with the blockchain, let's 
 
 With that done, we need to copy `RandOracle`'s ABI into a file where the data provider can see it. Click on **Copy ABI** next to `RandOracle`'s address to load the ABI into your clipboard. Then create a new file in `provider` named `randOracleABI.json` and paste the contents of your clipboard into it.
 
-![Copy ABI](/images/tutorials/44-smart-contract-oracle/copyabi.png)
+![Copy ABI](https://docs.replit.com/images/tutorials/44-smart-contract-oracle/copyabi.png)
 
 Now open `index.js`, find the line beginning with `const oracleContractAddress`, and replace the placeholder string with the address of the deployed `RandOracle` contract.
 
@@ -779,7 +779,7 @@ console.log(`Address: ${addressData.getAddressString()}`);
 
 Stop and run your repl. Navigate to the Shell tab in bottom-right panel and run the command `node walletGen.js`. You should see two long strings of letters and numbers appear beneath your command. The first is your new wallet's private key, and the second is your new wallet's address.
 
-![Wallet credentials](/images/tutorials/44-smart-contract-oracle/tempwallet.png)
+![Wallet credentials](https://docs.replit.com/images/tutorials/44-smart-contract-oracle/tempwallet.png)
 
 Anyone who knows this private key can control the wallet, so we'll need to keep it safe. Open the Secrets tab on your repl's sidebar. Create new key named `DATAPROVIDER_PRIVATE_KEY` and paste in the private key as its value. Click the button "Add new value" to save the entry.
 
@@ -844,9 +844,9 @@ app.listen(PORT, () => console.log(`Server listening on port: ${PORT}`));
 
 Now that we have everything connected, we want to replace the Solidity starter interface with our data provider application and client frontend. To do this, make sure that hidden files are showing and open `.replit`. 
 
-<img src="/images/tutorials/44-smart-contract-oracle/showhidden.png"
-alt="Show hidden"
-style="width: 40% !important;"/>
+{width: 40%, align: middle}
+![Show hidden](https://docs.replit.com/images/tutorials/44-smart-contract-oracle/showhidden.png)
+
 
 Replace `run = "node tools"` with the following:
 
@@ -868,9 +868,9 @@ We must run the provider as a Hardhat script rather than a plain Node.js applica
 
 Our client and oracle are finally both ready to roll. Stop your repl and rerun it. You should see our frontend in the repl browser. Click the button to request a random number and watch the events come in.
 
-<img src="/images/tutorials/44-smart-contract-oracle/finalapp.png"
-alt="Final app"
-style="width: 60% !important;"/>
+{width: 60%, align: middle}
+![Final app](https://docs.replit.com/images/tutorials/44-smart-contract-oracle/finalapp.png)
+
 
 ## Where next?
 
@@ -882,6 +882,8 @@ Some next steps you might want to try:
 * Build something more sophisticated on top of `Client`. For example, you could adapt the [ReplBot NFT contracts](https://docs.replit.com/tutorials/42-build-a-robot-nft) to use this oracle as a source of randomness. Or you could write something like a lottery contract.
 * Experiment with different data sources. An oracle can be a source for any data you can think of, from stock prices to the weather.
 
-You can find our repl below:
 
-<iframe height="400px" width="100%" src="https://replit.com/@ritza/Oracle?embed=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+## Code
+
+You can find the code for this tutorial on [Replit](https://replit.com/@ritza/Oracle).
+
